@@ -15,7 +15,7 @@ const Post = () => {
     },[1])
     return (
         <div className="container mt-5 ">
-            <div className="row">
+            <div className="row m-auto justify-content-center">
                 {
                     posts.map((post) => (<PostDetails post={post} key={post.id}/>))
                 }

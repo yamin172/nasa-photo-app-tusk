@@ -7,7 +7,7 @@ const DetailsImage = ({images}) => {
             {
                 images.map((image => {
                     return <div className="col" key={images.id}>
-                        <img src={image.urls.regular} alt="photos" className="mt-4 rounded-3" style={{ height: '300px' }}/>
+                        <img src={image.urls.regular} alt="photos" className="mt-4 shadow rounded-3" style={{ height: '300px' }}/>
                     </div>
                 }))
             }
