@@ -1,11 +1,10 @@
 import React from 'react';
 
-const AlbumDetails = (props) => {
-    const { title } = props.photos;
-    
+const AlbumDetails = () => {
+
     return (
         <div>
-            <h1>{title}</h1>
+            <h1>{}</h1>
         </div>
     );
 };

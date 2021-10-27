@@ -4,21 +4,19 @@ import AlbumDetails from '../AlbumDetails/AlbumDetails';
 
 const Album = () => {
     const [photos, setPhotos] = useState();
-    console.log("🚀 ~ file: Album.js ~ line 7 ~ Album ~ photos", photos)
     
     useEffect(() => {
         axios.get(`https://jsonplaceholder.typicode.com/photos`)
             .then(res => {
-            setPhotos(res.data)
+                setPhotos(res.data)
         })
-    },[])
+    }, [])
+    console.log(photos)
     return (
         <div className="container mt-5">
-            <div>
-                {
-                    
-                }
-            </div>
+            {
+                photos?.map((photos) => (<AlbumDetails photo={photos} key={photos.id}/>))
+            }
         </div>
     );
 };
