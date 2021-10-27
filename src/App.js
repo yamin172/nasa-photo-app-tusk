@@ -9,6 +9,7 @@ import Navbar from './Components/Home/Navbar/Navbar';
 import Home from './Components/Home/Home/Home';
 import Images from './Components/Images/Image/Image'
 import Post from './Components/Posts/Post/Post';
+import Album from './Components/Albums/Album/Album';
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
           <Post/>
         </Route>
         <Route path="/album">
-
+          <Album />
         </Route>
       </Switch>
     </Router>

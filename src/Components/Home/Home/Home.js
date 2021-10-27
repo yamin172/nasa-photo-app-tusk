@@ -19,7 +19,7 @@ const Home = () => {
 
     return (
         <>
-            <div className="container mt-3">
+            <div className="container mt-3 justify-content-center">
                 {nasaPhoto.media_type === "image" ? (
             <img
             src={nasaPhoto.url}
