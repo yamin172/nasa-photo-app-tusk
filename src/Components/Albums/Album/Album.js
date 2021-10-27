@@ -11,12 +11,13 @@ const Album = () => {
                 setPhotos(res.data)
         })
     }, [])
-    console.log(photos)
     return (
         <div className="container mt-5">
-            {
-                photos?.map((photos) => (<AlbumDetails photo={photos} key={photos.id}/>))
-            }
+            <div className="row justify-content-center">
+                {
+                    photos?.map((photos) => (<AlbumDetails photo={photos} key={photos.id}/>))
+                }
+            </div>
         </div>
     );
 };

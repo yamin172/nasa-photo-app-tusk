@@ -19,11 +19,13 @@ const Home = () => {
 
     return (
         <>
-            <div className="container mt-3 justify-content-center">
+            <div className="container mt-3 card shadow justify-content-center">
                 {nasaPhoto.media_type === "image" ? (
             <img
+            style={{ height: '600px', width: '100%'}}
             src={nasaPhoto.url}
             alt={nasaPhoto.title}
+            className="rounded mt-3"
             />
             ) : (
             <iframe
@@ -31,17 +33,17 @@ const Home = () => {
             src={nasaPhoto.url}
             frameBorder="0"
             gesture="media"
-                            width="100%"
-                            height="570"
+            width="100%"
+            height="570"
             allow="encrypted-media"
             allowFullScreen
             className="photo"
             />
         )}
-        <div>
+        <div className="card-body">
             <h1>{nasaPhoto.title}</h1>
-            <p className="">{nasaPhoto.date}</p>
-            <p className="text-wrap">{nasaPhoto.explanation}</p>
+            <p className="card-title">{nasaPhoto.date}</p>
+            <p className="card-text">{nasaPhoto.explanation}</p>
         </div>
         </div>
         </>
