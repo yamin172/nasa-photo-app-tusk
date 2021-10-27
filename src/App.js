@@ -7,7 +7,8 @@ import {
 } from "react-router-dom";
 import Navbar from './Components/Home/Navbar/Navbar';
 import Home from './Components/Home/Home/Home';
-import Images from './Components/Home/Images/Image/Image';
+import Images from './Components/Images/Image/Image'
+import Post from './Components/Posts/Post/Post';
 
 function App() {
   return (
@@ -22,6 +23,12 @@ function App() {
         </Route>
         <Route path="/image">
           <Images/>
+        </Route>
+        <Route path="/post">
+          <Post/>
+        </Route>
+        <Route path="/album">
+
         </Route>
       </Switch>
     </Router>
