@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import Navbar from '../Navbar/Navbar';
 const apiKey = "j8RPPBEoheiiYsduHPeKKchdYcjy9PSeirWHlmMT";
 const Home = () => {
     
@@ -17,6 +17,7 @@ const Home = () => {
 
     return (
         <>
+            <Navbar/>
             <div className="container mt-3 card shadow justify-content-center">
                 {nasaPhoto.media_type === "image" ? (
             <img

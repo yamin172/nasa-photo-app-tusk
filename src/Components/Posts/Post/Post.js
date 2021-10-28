@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import Navbar from '../../Home/Navbar/Navbar';
 import PostDetails from '../PostDetails/PostDetails';
 
 
@@ -13,13 +14,16 @@ const Post = () => {
         })
     },[1])
     return (
-        <div className="container mt-5 ">
-            <div className="row m-auto justify-content-center">
-                {
-                    posts.map((post) => (<PostDetails post={post} key={post.id}/>))
-                }
+        <>
+            <Navbar/>
+            <div className="container mt-5 ">
+                <div className="row m-auto justify-content-center">
+                    {
+                        posts.map((post) => (<PostDetails post={post} key={post.id}/>))
+                    }
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 

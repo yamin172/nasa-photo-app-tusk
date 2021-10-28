@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import Navbar from '../../Home/Navbar/Navbar';
 import AlbumDetails from '../AlbumDetails/AlbumDetails';
 
 const Album = () => {
@@ -12,13 +13,16 @@ const Album = () => {
         })
     }, [])
     return (
-        <div className="container mt-5">
-            <div className="row justify-content-center">
-                {
-                    photos?.map((photos) => (<AlbumDetails photo={photos} key={photos.id}/>))
-                }
+        <>
+            <Navbar/>
+            <div className="container mt-5">
+                <div className="row justify-content-center">
+                    {
+                        photos?.map((photos) => (<AlbumDetails photo={photos} key={photos.id}/>))
+                    }
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 
