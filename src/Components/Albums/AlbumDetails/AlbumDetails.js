@@ -1,7 +1,6 @@
 import React from 'react';
 
 const AlbumDetails = ({ photo:{title,url,thumbnailUrl,albumId}}) => {
-    console.log()
     return (
         <div class="card m-3 shadow" style={{width: '18rem'}}>
             <img src={thumbnailUrl} className="card-img-top mt-3" alt="..."/>

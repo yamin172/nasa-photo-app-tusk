@@ -4,14 +4,12 @@ const apiKey = "j8RPPBEoheiiYsduHPeKKchdYcjy9PSeirWHlmMT";
 const Home = () => {
     
     const [nasaPhoto, setNasaPhoto] = useState(null);
-    console.log("🚀 ~ file: Home.js ~ line 6 ~ Home ~ nasaPhoto", nasaPhoto)
     
     useEffect(() => {
         fetchPhoto()
         async function fetchPhoto() {
             const res = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`);
             const data = await res.json();
-            console.log(data)
             setNasaPhoto(data)
         }
     }, []);
